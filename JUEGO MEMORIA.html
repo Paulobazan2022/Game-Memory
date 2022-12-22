@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./JUEGO MEMORIA.js"></script>
+    <link rel="stylesheet" type="text/css" href="JUEGO MEMORIA.css">
+     
+ 
+</head>
+
+<body>
+
+    <form class="starter-form" name="memory" onsubmit="return starGame(event)">
+
+        <div class="details" id="details">
+
+            <div classs="players">
+                <h2>Rellena nombre de los jugadores!</h2>
+                <input type="text" id="player-1-name" class="player" placeholder="Pon tu nombre" required/>
+                <input type="text" id="player-2-name" class="player" placeholder="Pon tu nombre" required/>
+            </div>
+
+            <div class="difficulty">
+                <h2>Elije la dificultad</h2>
+                <input type="radio" name="difficulty" class="difficulty" id="easy" value="easy" required onclick="setDifficulty(12)"/> Fácil 
+                <input type="radio" name="difficulty" class="difficulty" id="medium" value="medium" required onclick="setDifficulty(24)"/> Medio 
+                <input type="radio" name="difficulty" class="difficulty" id="difficult" value="difficult" required onclick="setDifficulty(30)"/> Difícil 
+
+            </div>
+
+            <div>
+                <input type="submit" value="INICIAR" />
+            </div>
+
+        </div>
+
+    </form>
+
+    <div class="board-game" id="board-game">
+      
+      <div class="players-board" id="players-board">
+        <div name="player1" id="visible-name-1" class="NamePlayer"></div>
+             <input type="Number" id="counter1" readonly />        
+
+        <div name="player2" id="visible-name-2" class="NamePlayer"></div>
+             <input type="Number" id="counter2" readonly /> 
+
+      </div>
+      
+        <div class="cards" id="cards"> </div>
+
+    </div>
+
+    <input class="restart" id="restart" type="button" value="Reiniciar" onclick="restart()"></input>
+ 
+<body>
+
+</html>
